@@ -25,9 +25,13 @@ export default function Home() {
         },
     ];
 
-    const education = [
+    const educations = [
         {
-            logo: "/profile_photo.png"
+            logo: "/profile_photo.png",
+            title: "University of Bologna",
+            position: "Msc in Computer Science and Engineering",
+            description: "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"",
+            dates: "January 2021 - May 2022",
         }
     ]
 
@@ -61,12 +65,13 @@ export default function Home() {
                                 className="rounded-lg object-cover mr-4"
                             />
                             <div className="flex flex-col justify-between flex-grow">
+
                                 <div className="flex justify-between items-center">
-                                    <div>
-                                        <h3 className="text-lg font-semibold">{experience.title}</h3>
-                                        <h4 className="text-md text-gray-600">{experience.position}</h4>
-                                    </div>
+                                    <h3 className="text-lg font-semibold">{experience.title}</h3>
                                     <p className="text-sm text-gray-500">{experience.dates}</p>
+                                </div>
+                                <div className="flex justify-start">
+                                    <h4 className="text-md text-gray-600">{experience.position}</h4>
                                 </div>
                                 <p className="text-gray-700 text-left">{experience.description}</p>
                             </div>
@@ -76,24 +81,24 @@ export default function Home() {
 
                 <h2 className="text-2xl font-semibold mt-4 mb-2">Education</h2>
                 <ul className="list-none space-y-4">
-                    {experiences.map((experience, index) => (
+                    {educations.map((education, index) => (
                         <li key={index} className="flex items-start space-x-4 p-4">
                             <Image
-                                src={experience.logo}
-                                alt={`Logo di ${experience.title}`}
+                                src={education.logo}
+                                alt={`Logo di ${education.title}`}
                                 width={50}
                                 height={50}
                                 className="rounded-lg object-cover mr-4"
                             />
                             <div className="flex flex-col justify-between flex-grow">
                                 <div className="flex justify-between items-center">
-                                    <div>
-                                        <h3 className="text-lg font-semibold">{experience.title}</h3>
-                                        <h4 className="text-md text-gray-600">{experience.position}</h4>
-                                    </div>
-                                    <p className="text-sm text-gray-500">{experience.dates}</p>
+                                    <h3 className="text-lg font-semibold">{education.title}</h3>
+                                    <p className="text-sm text-gray-500">{education.dates}</p>
                                 </div>
-                                <p className="text-gray-700 text-left">{experience.description}</p>
+                                <div className="flex justify-start">
+                                    <h4 className="text-md text-gray-600">{education.position}</h4>
+                                </div>
+                                <p className="text-gray-700 text-left">{education.description}</p>
                             </div>
                         </li>
                     ))}
