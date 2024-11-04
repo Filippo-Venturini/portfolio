@@ -1,6 +1,5 @@
 import Image from "next/image";
-import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
-import {Button} from "@nextui-org/button";
+import {Card, CardHeader, CardBody} from "@nextui-org/card";
 
 export default function Home() {
     const experiences = [
