@@ -1,4 +1,6 @@
 import Image from "next/image";
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import {Button} from "@nextui-org/button";
 
 export default function Home() {
     const experiences = [
@@ -71,8 +73,9 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+
             <div className="flex items-center gap-4">
-                <h1 className="text-4xl font-bold">Hi, I'm Filippo</h1>
+                <h1 className="text-4xl font-bold">Hi, I&#39;m Filippo</h1>
                 <Image
                     src="/profile_photo.png"
                     alt="Foto di Filippo"
@@ -85,7 +88,7 @@ export default function Home() {
 
             <section className="text-center max-w-xl">
                 <p className="mb-4 text-lg">
-                    Hi! I'm Filippo, ...about me...
+                    Hi! I&#39;m Filippo, ...about me...
                 </p>
                 <h2 className="text-2xl font-semibold mt-4 mb-2">Work Experience</h2>
                 <ul className="list-none space-y-4">
@@ -141,29 +144,30 @@ export default function Home() {
 
             <section className="max-w-6xl w-full mt-12">
                 <h2 className="text-2xl font-semibold text-center mb-4">Personal Projects</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={400}
-                                height={250}
-                                className="object-cover w-full h-40"
-                            />
-                            <div className="p-4">
-                                <h3 className="text-lg font-semibold">{project.title}</h3>
-                                <p className="text-gray-700 mt-2">{project.description}</p>
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block mt-4 text-blue-500 hover:underline"
-                                >
-                                    Scopri di più
-                                </a>
-                            </div>
-                        </div>
+                        <Card
+                            key={index}
+                            style={{ backgroundColor: 'rgba(0, 0, 255, 0.1)', backdropFilter: 'blur(10px)', padding: '16px', maxWidth: '270px' }} // Background trasparente opaco
+                            className={`py-4 rounded-xl w-full transition-transform transform hover:scale-105 ${
+                                index % 2 === 0 ? 'justify-self-end' : 'justify-self-start'
+                            }`}
+                        >
+                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                                <p className="text-tiny uppercase font-bold">Daily Mix</p>
+                                <small className="text-default-500">12 Tracks</small>
+                                <h4 className="font-bold text-large">Frontend Radio</h4>
+                            </CardHeader>
+                            <CardBody className="overflow-visible py-2">
+                                <Image
+                                    alt="Card background"
+                                    className="object-cover rounded-xl"
+                                    src="/profile_photo.png"
+                                    width={270}
+                                    height={270}
+                                />
+                            </CardBody>
+                        </Card>
                     ))}
                 </div>
             </section>
