@@ -31,8 +31,8 @@ export default function Home() {
             logo: "/unibo_logo.jpg",
             title: "University of Bologna",
             position: "Msc in Computer Science and Engineering",
-            description: "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"",
-            dates: "January 2021 - May 2022",
+            description: "Grade: 110/110 with honors",
+            dates: "2022 - 2024",
         },
         {
             logo: "/universitat_politecnica_de_catalunya_logo.jpg",
@@ -40,32 +40,43 @@ export default function Home() {
             position: "International Studies",
             description: "Master in Artificial Intelligence + Master in Research in Informatics",
             dates: "September 2023 - February 2024",
-        }
+        },
+        {
+            logo: "/unibo_logo.jpg",
+            title: "University of Bologna",
+            position: "Bsc in Computer Science and Engineering",
+            description: "Grade: 110/110 with honors",
+            dates: "2019 - 2022",
+        },
     ];
 
     const projects = [
         {
-            title: "Progetto 1",
-            description: "Descrizione del progetto 1.",
-            image: "/profile_photo.png",
-            link: "https://example.com/project1",
+            title: "PlagueDotScala",
+            description: "Game",
+            technologies: "Scala, FP, SCRUM, TDD",
+            image: "/PlagueDotScala.jpg",
+            link: "https://github.com/Filippo-Venturini/PPS-22-plague",
         },
         {
-            title: "Progetto 2",
-            description: "Descrizione del progetto 2.",
-            image: "/profile_photo.png",
-            link: "https://example.com/project2",
+            title: "ErasmusPlus",
+            description: "Website",
+            technologies: "MEVN Stack, GoogleMaps, HCI, UX",
+            image: "/ErasmusPlus.png",
+            link: "https://github.com/Filippo-Venturini/ErasmusPlus",
         },
         {
-            title: "Progetto 3",
-            description: "Descrizione del progetto 3.",
-            image: "/profile_photo.png",
-            link: "https://example.com/project3",
+            title: "MovieNerd",
+            description: "Mobile Application",
+            technologies: "Android, Java, IMDB, Gamification",
+            image: "/MovieNerd.png",
+            link: "https://github.com/Filippo-Venturini/MovieNerd",
         },
         {
-            title: "Progetto 4",
-            description: "Descrizione del progetto 4.",
-            image: "/profile_photo.png",
+            title: "MARL of Swarm Behaviours with GNNs",
+            description: "Master Thesis",
+            technologies: "Graph Neural Networks, Multi-Agent, Reinforcement Learning",
+            image: "/Master_Thesis.png",
             link: "https://example.com/project4",
         },
     ];
@@ -74,7 +85,11 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
             <div className="flex items-center gap-4">
-                <h1 className="text-4xl font-bold">Hi, I&#39;m Filippo</h1>
+                <div>
+                    <h1 className="text-6xl font-bold">Hi, I&#39;m Filippo</h1>
+                    <p className="text-2xl">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
+                </div>
+
                 <Image
                     src="/profile_photo.png"
                     alt="Foto di Filippo"
@@ -145,28 +160,30 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold text-center mb-4">Personal Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
                     {projects.map((project, index) => (
-                        <Card
-                            key={index}
-                            style={{ backgroundColor: 'rgba(0, 0, 255, 0.1)', backdropFilter: 'blur(10px)', padding: '16px', maxWidth: '270px' }} // Background trasparente opaco
-                            className={`py-4 rounded-xl w-full transition-transform transform hover:scale-105 ${
-                                index % 2 === 0 ? 'justify-self-end' : 'justify-self-start'
-                            }`}
-                        >
-                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                                <p className="text-tiny uppercase font-bold">Daily Mix</p>
-                                <small className="text-default-500">12 Tracks</small>
-                                <h4 className="font-bold text-large">Frontend Radio</h4>
-                            </CardHeader>
-                            <CardBody className="overflow-visible py-2">
-                                <Image
-                                    alt="Card background"
-                                    className="object-cover rounded-xl"
-                                    src="/profile_photo.png"
-                                    width={270}
-                                    height={270}
-                                />
-                            </CardBody>
-                        </Card>
+                        <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                            <Card
+                                style={{ padding: '16px', maxWidth: '270px' }}
+                                className={`glassmorphic py-4 rounded-xl w-full transition-transform transform hover:scale-105 ${
+                                    index % 2 === 0 ? 'justify-self-end' : 'justify-self-start'
+                                }`}
+                            >
+                                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                                    <p className="text-tiny uppercase font-bold">{project.title}</p>
+                                    <p className="text-tiny">{project.description}</p>
+                                    <small className="text-default-500">{project.technologies}</small>
+                                </CardHeader>
+                                <CardBody className="overflow-visible py-2">
+                                    <Image
+                                        alt="Card background"
+                                        className="object-cover rounded-xl"
+                                        src={project.image}
+                                        width={270}
+                                        height={270}
+                                    />
+                                </CardBody>
+                            </Card>
+                        </a>
+
                     ))}
                 </div>
             </section>
