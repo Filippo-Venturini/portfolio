@@ -55,7 +55,7 @@ export default function Home() {
             title: "PlagueDotScala",
             description: "Game",
             technologies: "Scala, FP, SCRUM, TDD",
-            image: "/PlagueDotScala.jpg",
+            image: "/PlagueDotScala_1.jpg",
             link: "https://github.com/Filippo-Venturini/PPS-22-plague",
         },
         {
@@ -83,28 +83,30 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+            <section className="max-w-xl">
+                <div className="flex items-center gap-4">
+                    <div>
+                        <h1 className="text-6xl font-bold">Hi, I&#39;m Filippo</h1>
+                        <p className="text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
+                    </div>
 
-            <div className="flex items-center gap-4">
-                <div>
-                    <h1 className="text-6xl font-bold">Hi, I&#39;m Filippo</h1>
-                    <p className="text-2xl">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
+                    <Image
+                        src="/profile_photo.png"
+                        alt="Foto di Filippo"
+                        width={150}
+                        height={150}
+                        className="rounded-full object-cover"
+                        priority
+                    />
                 </div>
-
-                <Image
-                    src="/profile_photo.png"
-                    alt="Foto di Filippo"
-                    width={150}
-                    height={150}
-                    className="rounded-full object-cover"
-                    priority
-                />
-            </div>
+            </section>
 
             <section className="text-center max-w-xl">
-                <p className="mb-4 text-lg">
-                    Hi! I&#39;m Filippo, ...about me...
+                <h2 className="text-2xl font-semibold text-start">About</h2>
+                <p className="mb-4 text-md text-gray-600 text-start">
+                    Hi! I&#39;m Filippo, I'm currently working as a Software Engineer at Blue Reply IT.
                 </p>
-                <h2 className="text-2xl font-semibold mt-4 mb-2">Work Experience</h2>
+                <h2 className="text-2xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
                 <ul className="list-none space-y-4">
                     {experiences.map((experience, index) => (
                         <li key={index} className="flex items-start space-x-4 p-4">
@@ -130,7 +132,7 @@ export default function Home() {
                     ))}
                 </ul>
 
-                <h2 className="text-2xl font-semibold mt-4 mb-2">Education</h2>
+                <h2 className="text-2xl font-semibold mt-4 mb-2 text-start">Education</h2>
                 <ul className="list-none space-y-4">
                     {educations.map((education, index) => (
                         <li key={index} className="flex items-start space-x-4 p-4">
@@ -156,13 +158,13 @@ export default function Home() {
                 </ul>
             </section>
 
-            <section className="max-w-6xl w-full mt-12">
-                <h2 className="text-2xl font-semibold text-center mb-4">Personal Projects</h2>
+            <section className="max-w-xl w-full mt-12">
+                <h2 className="text-2xl font-semibold text-center mb-4 text-start">Personal Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
                     {projects.map((project, index) => (
                         <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
                             <Card
-                                style={{ padding: '16px', maxWidth: '270px' }}
+                                style={{ padding: '16px', maxWidth: '270px', willChange: 'transform' }}
                                 className={`glassmorphic py-4 rounded-xl w-full transition-transform transform hover:scale-105 ${
                                     index % 2 === 0 ? 'justify-self-end' : 'justify-self-start'
                                 }`}
