@@ -104,7 +104,7 @@ export default function Home() {
             <section className="text-center max-w-xl">
                 <h2 className="text-2xl font-semibold text-start">About</h2>
                 <p className="mb-4 text-md text-gray-600 text-start">
-                    Hi! I&#39;m Filippo, I'm currently working as a Software Engineer at Blue Reply IT.
+                    Hi! I&#39;m Filippo, I&#39;m currently working as a Software Engineer at Blue Reply IT.
                 </p>
                 <h2 className="text-2xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
                 <ul className="list-none space-y-4">
