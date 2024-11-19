@@ -86,7 +86,7 @@ export default function Home() {
             <section className="max-w-xl">
                 <div className="flex items-center gap-4">
                     <div>
-                        <h1 className="text-6xl font-bold">Hi, I&#39;m Filippo</h1>
+                        <h1 className="text-2xl md:text-6xl font-bold">Hi, I&#39;m Filippo</h1>
                         <p className="text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
                     </div>
 
