@@ -9,6 +9,7 @@ export default function Home() {
             position: "Software Engineer",
             description: "Backend software development.",
             dates: "October 2024 - Current",
+            link: "https://www.reply.com/blue-reply/it/"
         },
         {
             logo: "/spot_logo.jpg",
@@ -16,6 +17,7 @@ export default function Home() {
             position: "Software Engineer, Intern",
             description: "Designed and implemented a micro service web application in Angular, React and Node.",
             dates: "February 2022 - April 2022",
+            link: "https://www.spotdigitalmadesimple.com/it/"
         },
         {
             logo: "/vae_victis_logo.jpg",
@@ -33,6 +35,7 @@ export default function Home() {
             position: "Msc in Computer Science and Engineering",
             description: "Grade: 110/110 with honors",
             dates: "2022 - 2024",
+            link: "https://corsi.unibo.it/2cycle/ComputerScienceEngineering"
         },
         {
             logo: "/universitat_politecnica_de_catalunya_logo.jpg",
@@ -40,6 +43,7 @@ export default function Home() {
             position: "International Studies",
             description: "Master in Artificial Intelligence + Master in Research in Informatics",
             dates: "September 2023 - February 2024",
+            link: "https://www.upc.edu/en"
         },
         {
             logo: "/unibo_logo.jpg",
@@ -47,6 +51,7 @@ export default function Home() {
             position: "Bsc in Computer Science and Engineering",
             description: "Grade: 110/110 with honors",
             dates: "2019 - 2022",
+            link: "https://corsi.unibo.it/1cycle/ComputerScienceEngineering"
         },
     ];
 
@@ -82,12 +87,12 @@ export default function Home() {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 md:p-20 font-[family-name:var(--font-geist-sans)]">
             <section className="max-w-xl">
                 <div className="flex items-center gap-4">
                     <div>
-                        <h1 className="text-2xl md:text-6xl font-bold">Hi, I&#39;m Filippo</h1>
-                        <p className="text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
+                        <h1 className="text-3xl md:text-6xl font-bold">Hi, I&#39;m Filippo</h1>
+                        <p className="text-base md:text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
                     </div>
 
                     <Image
@@ -102,58 +107,61 @@ export default function Home() {
             </section>
 
             <section className="text-center max-w-xl">
-                <h2 className="text-2xl font-semibold text-start">About</h2>
+                <h2 className="text-xl font-semibold text-start">About</h2>
                 <p className="mb-4 text-md text-gray-600 text-start">
                     Hi! I&#39;m Filippo, I&#39;m currently working as a Software Engineer at Blue Reply IT.
                 </p>
-                <h2 className="text-2xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
-                <ul className="list-none space-y-4">
+                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
+                <ul className="list-none space-y-8">
                     {experiences.map((experience, index) => (
-                        <li key={index} className="flex items-start space-x-4 p-4">
-                            <Image
-                                src={experience.logo}
-                                alt={`Logo di ${experience.title}`}
-                                width={50}
-                                height={50}
-                                className="rounded-lg object-cover mr-4"
-                            />
-                            <div className="flex flex-col justify-between flex-grow">
-
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-lg font-semibold">{experience.title}</h3>
-                                    <p className="text-sm text-gray-500">{experience.dates}</p>
+                        <a key={index} href={experience.link} className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
+                            <li className="flex items-start space-x-4">
+                                <Image
+                                    src={experience.logo}
+                                    alt={`Logo di ${experience.title}`}
+                                    width={50}
+                                    height={50}
+                                    className="rounded-lg object-cover mr-4 border border-gray-300"
+                                />
+                                <div className="flex flex-col justify-between flex-grow">
+                                    <div className="flex justify-between items-center">
+                                        <h3 className="text-xs md:text-sm md:text-sm text-left font-semibold">{experience.title}</h3>
+                                        <p className="text-xs md:text-sm text-gray-500">{experience.dates}</p>
+                                    </div>
+                                    <div className="flex justify-start">
+                                        <h4 className="text-xs text-gray-600">{experience.position}</h4>
+                                    </div>
+                                    <p className="text-xs md:text-sm text-gray-700 text-left">{experience.description}</p>
                                 </div>
-                                <div className="flex justify-start">
-                                    <h4 className="text-md text-gray-600">{experience.position}</h4>
-                                </div>
-                                <p className="text-gray-700 text-left">{experience.description}</p>
-                            </div>
-                        </li>
+                            </li>
+                        </a>
                     ))}
                 </ul>
 
-                <h2 className="text-2xl font-semibold mt-4 mb-2 text-start">Education</h2>
-                <ul className="list-none space-y-4">
+                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Education</h2>
+                <ul className="list-none space-y-8">
                     {educations.map((education, index) => (
-                        <li key={index} className="flex items-start space-x-4 p-4">
-                            <Image
-                                src={education.logo}
-                                alt={`Logo di ${education.title}`}
-                                width={50}
-                                height={50}
-                                className="rounded-lg object-cover mr-4"
-                            />
-                            <div className="flex flex-col justify-between flex-grow">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-lg font-semibold">{education.title}</h3>
-                                    <p className="text-sm text-gray-500">{education.dates}</p>
+                        <a key={index} href={education.link} className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
+                            <li className="flex items-start space-x-4">
+                                <Image
+                                    src={education.logo}
+                                    alt={`Logo di ${education.title}`}
+                                    width={50}
+                                    height={50}
+                                    className="rounded-lg object-cover mr-4 border border-gray-300"
+                                />
+                                <div className="flex flex-col justify-between flex-grow">
+                                    <div className="flex justify-between items-center">
+                                        <h3 className="text-xs md:text-sm text-lg text-left font-semibold">{education.title}</h3>
+                                        <p className="text-xs md:text-sm text-gray-500">{education.dates}</p>
+                                    </div>
+                                    <div className="flex justify-start">
+                                        <h4 className="text-xs text-gray-600">{education.position}</h4>
+                                    </div>
+                                    <p className="text-xs md:text-sm text-gray-700 text-left">{education.description}</p>
                                 </div>
-                                <div className="flex justify-start">
-                                    <h4 className="text-md text-gray-600">{education.position}</h4>
-                                </div>
-                                <p className="text-gray-700 text-left">{education.description}</p>
-                            </div>
-                        </li>
+                            </li>
+                        </a>
                     ))}
                 </ul>
             </section>
