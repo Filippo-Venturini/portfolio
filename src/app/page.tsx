@@ -1,7 +1,6 @@
 import Image from "next/image";
 import {Card, CardHeader, CardBody} from "@nextui-org/card";
-import {FaHome, FaLinkedin, FaGithub, FaSun, FaMoon} from "react-icons/fa";
-import {FaS} from "react-icons/fa6";
+import {FaHome, FaLinkedin, FaGithub, FaSun} from "react-icons/fa";
 
 export default function Home() {
     const experiences = [
