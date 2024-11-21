@@ -26,6 +26,7 @@ export default function Home() {
             position: "AI Tester, Intern",
             description: "Evaluated the AI model for random circuit generation in RaceCraft. Tested and fine-tuned the hyperparameters of the AI model employed for the automated drivers.",
             dates: "January 2018 - March 2018",
+            link: "https://racecraft.tecnoplay.com/"
         },
     ];
 
@@ -42,7 +43,7 @@ export default function Home() {
             logo: "/universitat_politecnica_de_catalunya_logo.jpg",
             title: "UPC Barcelona",
             position: "International Studies",
-            description: "Master in Artificial Intelligence + Master in Research in Informatics",
+            description: "Master in Artificial Intelligence and Master in Research in Informatics",
             dates: "September 2023 - February 2024",
             link: "https://www.upc.edu/en"
         },
@@ -93,7 +94,7 @@ export default function Home() {
                 <div className="flex items-center gap-4">
                     <div>
                         <h1 className="text-3xl md:text-6xl font-bold">Hi, I&#39;m Filippo</h1>
-                        <p className="text-base md:text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems.</p>
+                        <p className="text-base md:text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
                     </div>
 
                     <Image
@@ -122,7 +123,7 @@ export default function Home() {
                 <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
                 <ul className="list-none space-y-8">
                     {experiences.map((experience, index) => (
-                        <a key={index} href={experience.link} className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
+                        <a key={index} href={experience.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
                             <li className="flex items-start space-x-4">
                                 <Image
                                     src={experience.logo}
@@ -149,7 +150,7 @@ export default function Home() {
                 <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Education</h2>
                 <ul className="list-none space-y-8">
                     {educations.map((education, index) => (
-                        <a key={index} href={education.link} className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
+                        <a key={index} href={education.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
                             <li className="flex items-start space-x-4">
                                 <Image
                                     src={education.logo}
