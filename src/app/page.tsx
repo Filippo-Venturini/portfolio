@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {Card, CardHeader, CardBody} from "@nextui-org/card";
 import {FaHome, FaLinkedin, FaGithub, FaSun} from "react-icons/fa";
+import Head from "next/head";
 
 export default function Home() {
     const experiences = [
@@ -90,6 +91,9 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen p-8 gap-8 md:p-20 font-[family-name:var(--font-geist-sans)]">
+            <Head>
+                <title>Filippo Venturini</title>
+            </Head>
             <section className="max-w-xl">
                 <div className="flex items-center gap-4">
                     <div>
