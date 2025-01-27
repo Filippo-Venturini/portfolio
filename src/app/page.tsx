@@ -10,7 +10,7 @@ export default function Home() {
             logo: "/reply_logo.jpg",
             title: "Blue Reply IT",
             position: "Software Engineer",
-            description: "Backend software development.",
+            description: "Developed backend large scale systems with microservice architectures, AWS cloud technologies, Kubernetes and MongoDB.\n Designed multi-agent systems with LangGraph and Generative AI technologies.",
             dates: "October 2024 - Current",
             link: "https://www.reply.com/blue-reply/it/"
         },
@@ -61,6 +61,13 @@ export default function Home() {
 
     const projects = [
         {
+            title: "MARL of Swarm Behaviours with GNNs",
+            description: "Master Thesis",
+            technologies: "Graph Neural Networks, Multi-Agent, Reinforcement Learning",
+            image: "/Master_Thesis.png",
+            link: "https://amslaurea.unibo.it/id/eprint/33685/",
+        },
+        {
             title: "PlagueDotScala",
             description: "Game",
             technologies: "Scala, FP, SCRUM, TDD",
@@ -80,14 +87,7 @@ export default function Home() {
             technologies: "Android, Java, IMDB, Gamification",
             image: "/MovieNerd.png",
             link: "https://github.com/Filippo-Venturini/MovieNerd",
-        },
-        {
-            title: "MARL of Swarm Behaviours with GNNs",
-            description: "Master Thesis",
-            technologies: "Graph Neural Networks, Multi-Agent, Reinforcement Learning",
-            image: "/Master_Thesis.png",
-            link: "https://example.com/project4",
-        },
+        }
     ];
 
     return (
@@ -99,13 +99,15 @@ export default function Home() {
                 <section className="max-w-xl">
                     <div className="flex items-center gap-4">
                         <div>
-                            <h1 className="text-3xl md:text-6xl font-bold">Hi, I&#39;m Filippo</h1>
+                            <h1 className="text-3xl md:text-6xl font-bold">
+                                Hi, I&#39;m <span className="text-customBlue">Filippo</span>
+                            </h1>
                             <p className="text-base md:text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
                         </div>
 
                         <Image
                             src="/profile_photo.png"
-                            alt="Foto di Filippo"
+                            alt="photo of Filippo"
                             width={150}
                             height={150}
                             className="rounded-full object-cover"
@@ -122,18 +124,18 @@ export default function Home() {
                 </div>
 
                 <section className="text-center max-w-xl">
-                    <h2 className="text-xl font-semibold text-start">About</h2>
+                    <h2 className="text-xl font-semibold text-start">About <span className="text-customBlue">Me</span></h2>
                     <p className="mb-4 text-md text-gray-600 text-start">
                         Hi! I&#39;m Filippo, I&#39;m currently working as a Software Engineer at Blue Reply IT.
                     </p>
-                    <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work Experience</h2>
+                    <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work <span className="text-customBlue">Experience</span></h2>
                     <ul className="list-none space-y-8">
                         {experiences.map((experience, index) => (
                             <a key={index} href={experience.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
                                 <li className="flex items-start space-x-4">
                                     <Image
                                         src={experience.logo}
-                                        alt={`Logo di ${experience.title}`}
+                                        alt={`Logo of ${experience.title}`}
                                         width={50}
                                         height={50}
                                         className="rounded-lg object-cover mr-4 border border-gray-300"
@@ -153,14 +155,14 @@ export default function Home() {
                         ))}
                     </ul>
 
-                    <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Education</h2>
+                    <h2 className="text-xl font-semibold mt-4 mb-2 text-start">My <span className="text-customBlue">Education</span></h2>
                     <ul className="list-none space-y-8">
                         {educations.map((education, index) => (
                             <a key={index} href={education.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
                                 <li className="flex items-start space-x-4">
                                     <Image
                                         src={education.logo}
-                                        alt={`Logo di ${education.title}`}
+                                        alt={`Logo of ${education.title}`}
                                         width={50}
                                         height={50}
                                         className="rounded-lg object-cover mr-4 border border-gray-300"
@@ -182,7 +184,7 @@ export default function Home() {
                 </section>
 
                 <section className="max-w-xl w-full mt-12">
-                    <h2 className="text-2xl font-semibold text-center mb-4 text-start">Personal Projects</h2>
+                    <h2 className="text-2xl font-semibold text-center mb-16 text-start">Personal <span className="text-customBlue">Projects</span></h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         {projects.map((project, index) => (
                             <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
