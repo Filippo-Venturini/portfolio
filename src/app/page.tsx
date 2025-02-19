@@ -10,7 +10,7 @@ export default function Home() {
             logo: "/reply_logo.jpg",
             title: "Blue Reply IT",
             position: "Software Engineer",
-            description: "Developed backend large scale systems with microservice architectures, AWS cloud technologies, Kubernetes and MongoDB.\n Designed multi-agent systems with LangGraph and Generative AI technologies.",
+            description: "Built and optimized multi-agent systems with LangGraph and Generative AI, enhancing automation and decision-making capabilities across complex workflows by 70%. Designed and developed large-scale backend systems using microservice architectures, AWS cloud technologies, Kubernetes, and MongoDB, improving system scalability and reliability for millions of users.",
             dates: "October 2024 - Current",
             link: "https://www.reply.com/blue-reply/it/"
         },
@@ -26,7 +26,7 @@ export default function Home() {
             logo: "/vae_victis_logo.jpg",
             title: "Vae Victis Games",
             position: "AI Tester, Intern",
-            description: "Evaluated the AI model for random circuit generation in RaceCraft. Tested and fine-tuned the hyperparameters of the AI model employed for the automated drivers.",
+            description: "Evaluated and optimized the AI model for random circuit generation in the sandbox racing game RaceCraft, enhancing track diversity and player experience. Tested and fine-tuned hyperparameters for AI-driven automated drivers, resulting in smoother, more competitive, and adaptive racing behavior.",
             dates: "January 2018 - March 2018",
             link: "https://racecraft.tecnoplay.com/"
         },
@@ -102,7 +102,7 @@ export default function Home() {
                             <h1 className="text-3xl md:text-6xl font-bold">
                                 Hi, I&#39;m <span className="text-customBlue">Filippo</span>
                             </h1>
-                            <p className="text-base md:text-lg">Software Engineer, passionate about IoT, Machine Learning, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
+                            <p className="text-base md:text-lg">Software Engineer, passionate about Generative AI, Machine Learning, IoT, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
                         </div>
 
                         <Image
@@ -132,7 +132,7 @@ export default function Home() {
                     <ul className="list-none space-y-8">
                         {experiences.map((experience, index) => (
                             <a key={index} href={experience.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
-                                <li className="flex items-start space-x-4">
+                                <li className="flex items-start space-x-4 w-full">
                                     <Image
                                         src={experience.logo}
                                         alt={`Logo of ${experience.title}`}
@@ -159,7 +159,7 @@ export default function Home() {
                     <ul className="list-none space-y-8">
                         {educations.map((education, index) => (
                             <a key={index} href={education.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
-                                <li className="flex items-start space-x-4">
+                                <li className="flex items-start space-x-4 w-full">
                                     <Image
                                         src={education.logo}
                                         alt={`Logo of ${education.title}`}
@@ -175,7 +175,9 @@ export default function Home() {
                                         <div className="flex justify-start">
                                             <h4 className="text-xs text-left text-gray-600">{education.position}</h4>
                                         </div>
-                                        <p className="text-xs md:text-sm text-gray-700 text-left">{education.description}</p>
+                                        <div className="flex justify-start">
+                                            <p className="text-xs md:text-sm text-gray-700 text-left">{education.description}</p>
+                                        </div>
                                     </div>
                                 </li>
                             </a>
