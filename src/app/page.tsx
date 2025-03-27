@@ -117,10 +117,10 @@ export default function Home() {
                 </section>
 
                 <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-around bg-white/80 backdrop-blur-md rounded-full shadow-md p-4 w-full max-w-64 md:max-w-80">
-                    <a><FaHome className="text-xl cursor-pointer hover:text-blue-500 transition" /></a>
-                    <a href="https://www.linkedin.com/in/filippo-venturini-4265b8235/" target="_blank"><FaLinkedin className="text-xl cursor-pointer hover:text-blue-500 transition" /></a>
-                    <a href="https://github.com/Filippo-Venturini" target="_blank"><FaGithub className="text-xl cursor-pointer hover:text-blue-500 transition" /></a>
-                    <FaSun className="text-xl cursor-pointer hover:text-blue-500 transition"></FaSun>
+                    <a><FaHome className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
+                    <a href="https://www.linkedin.com/in/filippo-venturini-4265b8235/" target="_blank"><FaLinkedin className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
+                    <a href="https://github.com/Filippo-Venturini" target="_blank"><FaGithub className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
+                    <FaSun className="text-xl cursor-pointer hover:text-customBlue transition"></FaSun>
                 </div>
 
                 <section className="text-center max-w-xl">
