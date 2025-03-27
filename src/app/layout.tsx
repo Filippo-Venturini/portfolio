@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react"; // Importa NextUIProvider
+import FollowCursor from "./components/FollowCursor";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -25,6 +26,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
         <NextUIProvider>
+            <FollowCursor/>
             {children}
         </NextUIProvider>
         </body>
