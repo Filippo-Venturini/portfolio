@@ -98,7 +98,7 @@ export default function Home() {
                 <div className="flex items-center gap-4">
                     <div>
                         <h1 className="text-3xl md:text-6xl font-bold">
-                            Hi, I&#39;m <span className="text-customBlue">Filippo</span>
+                            Hi, I&#39;m <span className="text-customColor">Filippo</span>
                         </h1>
                         <p className="text-base md:text-lg">Software Engineer, passionate about Generative AI, Machine Learning, IoT, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
                     </div>
@@ -115,18 +115,18 @@ export default function Home() {
             </section>
 
             <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-around bg-white/80 backdrop-blur-md rounded-full shadow-md p-4 w-full max-w-64 md:max-w-80">
-                <a><FaHome className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
-                <a href="https://www.linkedin.com/in/filippo-venturini-4265b8235/" target="_blank"><FaLinkedin className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
-                <a href="https://github.com/Filippo-Venturini" target="_blank"><FaGithub className="text-xl cursor-pointer hover:text-customBlue transition" /></a>
-                <FaSun className="text-xl cursor-pointer hover:text-customBlue transition"></FaSun>
+                <a><FaHome className="text-xl cursor-pointer hover:text-customColor transition" /></a>
+                <a href="https://www.linkedin.com/in/filippo-venturini-4265b8235/" target="_blank"><FaLinkedin className="text-xl cursor-pointer hover:text-customColor transition" /></a>
+                <a href="https://github.com/Filippo-Venturini" target="_blank"><FaGithub className="text-xl cursor-pointer hover:text-customColor transition" /></a>
+                <FaSun className="text-xl cursor-pointer hover:text-customColor transition"></FaSun>
             </div>
 
             <section className="text-center max-w-xl">
-                <h2 className="text-xl font-semibold text-start">About <span className="text-customBlue">Me</span></h2>
+                <h2 className="text-xl font-semibold text-start">About <span className="text-customColor">Me</span></h2>
                 <p className="mb-4 text-md text-gray-600 text-start">
                     Hi! I&#39;m Filippo, I&#39;m currently working as a Software Engineer at Blue Reply IT.
                 </p>
-                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work <span className="text-customBlue">Experience</span></h2>
+                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work <span className="text-customColor">Experience</span></h2>
                 <ul className="list-none space-y-8">
                     {experiences.map((experience, index) => (
                         <a key={index} href={experience.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
@@ -153,7 +153,7 @@ export default function Home() {
                     ))}
                 </ul>
 
-                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">My <span className="text-customBlue">Education</span></h2>
+                <h2 className="text-xl font-semibold mt-4 mb-2 text-start">My <span className="text-customColor">Education</span></h2>
                 <ul className="list-none space-y-8">
                     {educations.map((education, index) => (
                         <a key={index} href={education.link} target="_blank" className="flex items-start space-x-4 hover:bg-gray-100 p-4 rounded-lg transition">
@@ -184,7 +184,7 @@ export default function Home() {
             </section>
 
             <section className="max-w-xl w-full mt-12">
-                <h2 className="text-2xl font-semibold text-center mb-16 text-start">Personal <span className="text-customBlue">Projects</span></h2>
+                <h2 className="text-2xl font-semibold text-center mb-16 text-start">Personal <span className="text-customColor">Projects</span></h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {projects.map((project, index) => (
                         <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
