@@ -9,7 +9,10 @@ export default function Home() {
             logo: "/reply_logo.jpg",
             title: "Blue Reply IT",
             position: "Software Engineer",
-            description: "Built and optimized multi-agent systems with LangGraph and Generative AI, enhancing automation and decision-making capabilities across complex workflows by 70%. Designed and developed large-scale backend systems using microservice architectures, AWS cloud technologies, Kubernetes, and MongoDB, improving system scalability and reliability for millions of users.",
+            description: [
+            "Built a real-time clustering system for road events (accidents, construction, weather) powering (de)activation of autonomous driving features across 1M+ vehicles, with 85% latency reduction. Scaled to 30k+ daily events using Java, Spring Boot, and MongoDB on Kubernetes/AWS.",
+            "Designed and deployed a multi-agent system with LangGraph and Python to automate end-to-end JUnit test generation from GitLab issues. Processed 50+ issues/month, saving ~60 QA hours/quarter; adopted by 2+ engineering teams within 3 months, fully replacing manual test workflows."
+            ],
             dates: "October 2024 - Current",
             link: "https://www.reply.com/blue-reply/it/"
         },
@@ -17,7 +20,8 @@ export default function Home() {
             logo: "/spot_logo.jpg",
             title: "SPOT Software",
             position: "Software Engineer, Intern",
-            description: "Designed and implemented a micro service web application in Angular, React and Node.",
+            description: ["Developed modular web applications using Angular microfrontends, enabling independent deployment pipelines across feature teams. ", 
+                          "Implemented async data flows with RxJS streams and leveraged functional programming patterns (immutability, pure functions, monadic composition) to reduce side effects and improve code testability."],
             dates: "February 2022 - April 2022",
             link: "https://www.spotdigitalmadesimple.com/it/"
         },
@@ -25,7 +29,7 @@ export default function Home() {
             logo: "/vae_victis_logo.jpg",
             title: "Vae Victis Games",
             position: "AI Tester, Intern",
-            description: "Evaluated and optimized the AI model for random circuit generation in the sandbox racing game RaceCraft, enhancing track diversity and player experience. Tested and fine-tuned hyperparameters for AI-driven automated drivers, resulting in smoother, more competitive, and adaptive racing behavior.",
+            description: ["Evaluated and optimized the AI model for random circuit generation in the sandbox racing game RaceCraft, enhancing track diversity and player experience. Tested and fine-tuned hyperparameters for AI-driven automated drivers, resulting in smoother, more competitive, and adaptive racing behavior."],
             dates: "January 2018 - March 2018",
             link: "https://racecraft.tecnoplay.com/"
         },
@@ -36,15 +40,20 @@ export default function Home() {
             logo: "/unibo_logo.jpg",
             title: "University of Bologna",
             position: "Msc in Computer Science and Engineering",
-            description: "Grade: 110/110 with honors",
+            description: ["110/110 with Honors", "Thesis focused on decentralized multi-agent reinforcement learning via GNNs, leading to a published research paper."],
             dates: "2022 - 2024",
             link: "https://corsi.unibo.it/2cycle/ComputerScienceEngineering"
         },
         {
             logo: "/universitat_politecnica_de_catalunya_logo.jpg",
             title: "UPC Barcelona",
-            position: "International Studies",
-            description: "Master in Artificial Intelligence and Master in Research in Informatics",
+            position: "Erasmus - MSc in Artificial Intelligence",
+            description: ["Completed coursework in Computer Graphics, Virtual and Augmented Reality, Cognitive Interaction with Robots, and Normative and Dynamic Virtual Worlds, focused on real-time simulation, embodied interaction, and AI for games.",
+                "Simulated particle, cloth, and fluid dynamics in C++ for real-time rendering.",
+                "Built AR and VR apps in Unity, including mobile-based AR and room-scale VR, sustaining 60 FPS on consumer devices.",
+                "Engineered a 3D investigation game with FSM-driven NPCs and AI behaviors, enabling 100% dynamic branching dialogue across 5+ suspect profiles.",
+                "Developed a pose-matching browser game using Google MediaPipe and webcam-based real-time human pose estimation, achieving >90% classification accuracy and <100 ms latency on Chrome."
+            ],
             dates: "September 2023 - February 2024",
             link: "https://www.upc.edu/en"
         },
@@ -52,7 +61,7 @@ export default function Home() {
             logo: "/unibo_logo.jpg",
             title: "University of Bologna",
             position: "Bsc in Computer Science and Engineering",
-            description: "Grade: 110/110 with honors",
+            description: ["110/110 with Honors", "Thesis: built a real-time network architecture in Unity (C#) for collaborative Mixed Reality on HoloLens 2, supporting consistent multi-user state sync. Achieved <50 ms latency and 3,800 packets/sec throughput in high-entity-density scenarios over TCP and UDP."],
             dates: "2019 - 2022",
             link: "https://corsi.unibo.it/1cycle/ComputerScienceEngineering"
         },
@@ -146,7 +155,11 @@ export default function Home() {
                                     <div className="flex justify-start">
                                         <h4 className="text-xs text-gray-600">{experience.position}</h4>
                                     </div>
-                                    <p className="text-xs md:text-sm text-gray-700 text-left">{experience.description}</p>
+                                    <ul>
+                                        {experience.description.map((item, idx) => (
+                                            <li key={idx} className="text-xs md:text-sm text-gray-700 text-left mb-2">• {item}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </li>
                         </a>
@@ -174,7 +187,11 @@ export default function Home() {
                                         <h4 className="text-xs text-left text-gray-600">{education.position}</h4>
                                     </div>
                                     <div className="flex justify-start">
-                                        <p className="text-xs md:text-sm text-gray-700 text-left">{education.description}</p>
+                                        <ul>
+                                            {education.description.map((item, idx) => (
+                                                <li key={idx} className="text-xs md:text-sm text-gray-700 text-left mb-2">• {item}</li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
