@@ -69,6 +69,13 @@ export default function Home() {
 
     const projects = [
         {
+            title: "ARGUS",
+            description: "NASA Space Apps",
+            technologies: "3D Engine, Simulation, Astrophysics, ThreeJS",
+            image: "/argus.png",
+            link: "https://github.com/Filippo-Venturini/meteor-madness/tree/main",
+        },
+        {
             title: "MARL of Swarm Behaviours with GNNs",
             description: "Master Thesis",
             technologies: "Graph Neural Networks, Multi-Agent, Reinforcement Learning",
@@ -79,7 +86,7 @@ export default function Home() {
             title: "PlagueDotScala",
             description: "Game",
             technologies: "Scala, FP, SCRUM, TDD",
-            image: "/PlagueDotScala_1.jpg",
+            image: "/PlagueDotScala.png",
             link: "https://github.com/Filippo-Venturini/PPS-22-plague",
         },
         {
@@ -219,7 +226,7 @@ export default function Home() {
                                 <CardBody className="overflow-visible py-2">
                                     <Image
                                         alt="Card background"
-                                        className="object-cover rounded-xl"
+                                        className="object-cover rounded-xl w-[270px] h-[250px]"
                                         src={project.image}
                                         width={270}
                                         height={270}
