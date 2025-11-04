@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {Card, CardHeader, CardBody} from "@nextui-org/card";
-import {FaHome, FaLinkedin, FaGithub, FaSun} from "react-icons/fa";
+import {FaHome, FaLinkedin, FaGithub} from "react-icons/fa";
 import Head from "next/head";
 
 export default function Home() {
