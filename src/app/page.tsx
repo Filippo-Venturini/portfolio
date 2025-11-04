@@ -76,11 +76,11 @@ export default function Home() {
             link: "https://github.com/Filippo-Venturini/meteor-madness/tree/main",
         },
         {
-            title: "MARL of Swarm Behaviours with GNNs",
-            description: "Master Thesis",
+            title: "Swarm Coordination with GNNs",
+            description: "Paper",
             technologies: "Graph Neural Networks, Multi-Agent, Reinforcement Learning",
-            image: "/Master_Thesis.png",
-            link: "https://amslaurea.unibo.it/id/eprint/33685/",
+            image: "/paper_2.png",
+            link: "https://www.mdpi.com/2673-2688/6/11/282",
         },
         {
             title: "PlagueDotScala",
@@ -134,7 +134,6 @@ export default function Home() {
                 <a><FaHome className="text-xl cursor-pointer hover:text-customColor transition" /></a>
                 <a href="https://www.linkedin.com/in/filippo-venturini-4265b8235/" target="_blank"><FaLinkedin className="text-xl cursor-pointer hover:text-customColor transition" /></a>
                 <a href="https://github.com/Filippo-Venturini" target="_blank"><FaGithub className="text-xl cursor-pointer hover:text-customColor transition" /></a>
-                <FaSun className="text-xl cursor-pointer hover:text-customColor transition"></FaSun>
             </div>
 
             <section className="text-center max-w-xl">
@@ -209,32 +208,37 @@ export default function Home() {
 
             <section className="max-w-xl w-full mt-12">
                 <h2 className="text-2xl font-semibold text-center mb-16 text-start">Personal <span className="text-customColor">Projects</span></h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
                     {projects.map((project, index) => (
-                        <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-                            <Card
-                                style={{ padding: '16px', maxWidth: '270px', willChange: 'transform' }}
-                                className={`glassmorphic py-4 rounded-xl w-full transition-transform transform hover:scale-105 justify-self-center ${
-                                    index % 2 === 0 ? 'md:justify-self-end' : 'md:justify-self-start'
-                                }`}
-                            >
-                                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                                    <p className="text-tiny uppercase font-bold">{project.title}</p>
-                                    <p className="text-tiny">{project.description}</p>
-                                    <small className="text-default-500">{project.technologies}</small>
-                                </CardHeader>
-                                <CardBody className="overflow-visible py-2">
-                                    <Image
-                                        alt="Card background"
-                                        className="object-cover rounded-xl w-[270px] h-[250px]"
-                                        src={project.image}
-                                        width={270}
-                                        height={270}
-                                    />
-                                </CardBody>
-                            </Card>
+                        <a
+                        key={index}
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                        >
+                        <Card
+                            style={{ padding: '16px', maxWidth: '370px', willChange: 'transform' }}
+                            className={`glassmorphic py-4 rounded-xl w-full h-full flex flex-col justify-between transition-transform transform hover:scale-105 ${
+                            index % 2 === 0 ? 'md:justify-self-end' : 'md:justify-self-start'
+                            }`}
+                        >
+                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start flex-grow">
+                            <p className="text-tiny uppercase font-bold">{project.title}</p>
+                            <p className="text-tiny">{project.description}</p>
+                            <small className="text-default-500">{project.technologies}</small>
+                            </CardHeader>
+                            <CardBody className="overflow-visible py-2">
+                            <Image
+                                alt="Card background"
+                                className="object-cover rounded-xl w-[270px] h-[250px]"
+                                src={project.image}
+                                width={270}
+                                height={270}
+                            />
+                            </CardBody>
+                        </Card>
                         </a>
-
                     ))}
                 </div>
             </section>
