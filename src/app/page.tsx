@@ -69,6 +69,13 @@ export default function Home() {
 
     const projects = [
         {
+            title: "TinyDiff",
+            description: "Diffusion Model",
+            technologies: "DDPM, UNet, Deep Learning, Pytorch, MNIST",
+            image: "/tinydiff.png",
+            link: "https://github.com/Filippo-Venturini/TinyDiff.git",
+        },
+        {
             title: "ARGUS",
             description: "NASA Space Apps",
             technologies: "3D Engine, Simulation, Astrophysics, ThreeJS",
