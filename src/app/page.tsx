@@ -69,6 +69,13 @@ export default function Home() {
 
     const projects = [
         {
+            title: "CtxVault",
+            description: "Local Semantic Memory",
+            technologies: "RAG, Multi-Agent, Semantic Search, Python, FastAPI, ChromaDB",
+            image: "/ctx_vault.svg",
+            link: "https://github.com/Filippo-Venturini/ctxvault.git",
+        },
+        {
             title: "TinyDiff",
             description: "Diffusion Model",
             technologies: "DDPM, UNet, Deep Learning, Pytorch, MNIST",
@@ -123,7 +130,7 @@ export default function Home() {
                         <h1 className="text-3xl md:text-6xl font-bold">
                             Hi, I&#39;m <span className="text-customColor">Filippo</span>
                         </h1>
-                        <p className="text-base md:text-lg">Software Engineer, passionate about Generative AI, Machine Learning, IoT, Distributed Systems, and VR/AR systems. 🚀🤖✨</p>
+                        <p className="text-base md:text-lg">Software Engineer, passionate about Generative AI, Multi-Agent Systems, Machine Learning, Distributed Systems and IoT. 🚀🤖✨</p>
                     </div>
 
                     <Image
