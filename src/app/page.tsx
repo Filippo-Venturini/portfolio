@@ -14,7 +14,7 @@ export default function Home() {
                 "Fine-tuned an LLM (Qwen) via SFT+DPO for Text-to-SQL generation on a complex automotive schema (~50 tables), reaching 70% execution accuracy vs. a 30% baseline — deployed in production for internal data querying.",
                 "Built a real-time clustering system (Spring Boot, K8s, AWS, MongoDB) for road events powering autonomous driving features across 1M+ vehicles — 85% latency reduction, scaling to 30k+ daily events."
             ],
-            dates: "October 2024 - Current",
+            dates: "October 2024 - Present",
             link: "https://www.reply.com/blue-reply/it/"
         },
         {
