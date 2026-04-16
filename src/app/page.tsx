@@ -8,13 +8,25 @@ export default function Home() {
         {
             logo: "/reply_logo.jpg",
             title: "Blue Reply IT",
-            position: "Software Engineer",
+            position: "AI Software Engineer",
             description: [
-            "Built a real-time clustering system for road events (accidents, construction, weather) powering (de)activation of autonomous driving features across 1M+ vehicles, with 85% latency reduction. Scaled to 30k+ daily events using Java, Spring Boot, and MongoDB on Kubernetes/AWS.",
-            "Designed and deployed a multi-agent system with LangGraph and Python to automate end-to-end JUnit test generation from GitLab issues. Processed 50+ issues/month, saving ~60 QA hours/quarter; adopted by 2+ engineering teams within 3 months, fully replacing manual test workflows."
+                "Designed a multi-agent system (LangGraph, Python) for automated end-to-end JUnit test generation from GitLab issues. Adopted by 2+ engineering teams within 3 months, saving ~60 QA hours/quarter and fully replacing manual workflows.",
+                "Fine-tuned an LLM (Qwen) via SFT+DPO for Text-to-SQL generation on a complex automotive schema (~50 tables), reaching 70% execution accuracy vs. a 30% baseline — deployed in production for internal data querying.",
+                "Built a real-time clustering system (Spring Boot, K8s, AWS, MongoDB) for road events powering autonomous driving features across 1M+ vehicles — 85% latency reduction, scaling to 30k+ daily events."
             ],
             dates: "October 2024 - Current",
             link: "https://www.reply.com/blue-reply/it/"
+        },
+        {
+            logo: "/ctx_vault.svg",
+            title: "CtxVault",
+            position: "Open Source Author & Maintainer",
+            description: [
+                "Built a local memory infrastructure for AI agents — typed vaults (semantic + procedural), structural isolation, and persistent cross-session retrieval via vector search (FastAPI, ChromaDB, Python).",
+                "Shipped to PyPI with MCP server support out of the box; 3.5k+ total downloads, 35+ GitHub stars in the first week."
+            ],
+            dates: "2025 - Present",
+            link: "https://github.com/Filippo-Venturini/ctxvault"
         },
         {
             logo: "/spot_logo.jpg",
@@ -71,7 +83,7 @@ export default function Home() {
         {
             title: "CtxVault",
             description: "Local Semantic Memory",
-            technologies: "RAG, Multi-Agent, Semantic Search, Python, FastAPI, ChromaDB",
+            technologies: "RAG, Multi-Agent, Semantic Search, MCP, Python, FastAPI, ChromaDB",
             image: "/ctx_vault.svg",
             link: "https://github.com/Filippo-Venturini/ctxvault.git",
         },
@@ -130,7 +142,9 @@ export default function Home() {
                         <h1 className="text-3xl md:text-6xl font-bold">
                             Hi, I&#39;m <span className="text-customColor">Filippo</span>
                         </h1>
-                        <p className="text-base md:text-lg">Software Engineer, passionate about Generative AI, Multi-Agent Systems, Machine Learning, Distributed Systems and IoT. 🚀🤖✨</p>
+                        <p className="text-base md:text-lg">
+                            AI Software Engineer. I build multi-agent systems and AI pipelines. Open source author, published researcher and hackathon enjoyer. 🤖🚀
+                        </p>
                     </div>
 
                     <Image
@@ -153,7 +167,10 @@ export default function Home() {
             <section className="text-center max-w-xl">
                 <h2 className="text-xl font-semibold text-start">About <span className="text-customColor">Me</span></h2>
                 <p className="mb-4 text-md text-gray-600 text-start">
-                    Hi! I&#39;m Filippo, I&#39;m currently working as a Software Engineer at Blue Reply IT.
+                    Hey! I'm Filippo, currently working as an AI Software Engineer at Blue Reply,
+                    where I build agentic AI and multi-agent systems. Before, I worked on 
+                    backend infrastructure for autonomous vehicles at scale.
+                    In my spare time I maintain CtxVault, an open source memory layer for AI agents.
                 </p>
                 <h2 className="text-xl font-semibold mt-4 mb-2 text-start">Work <span className="text-customColor">Experience</span></h2>
                 <ul className="list-none space-y-8">
