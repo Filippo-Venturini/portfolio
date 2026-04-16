@@ -25,7 +25,7 @@ export default function Home() {
                 "Built a local memory infrastructure for AI agents — typed vaults (semantic + procedural), structural isolation, and persistent cross-session retrieval via vector search (FastAPI, ChromaDB, Python).",
                 "Shipped to PyPI with MCP server support out of the box; 3.5k+ total downloads, 35+ GitHub stars in the first week."
             ],
-            dates: "2025 - Present",
+            dates: "December 2025 - Present",
             link: "https://github.com/Filippo-Venturini/ctxvault"
         },
         {
